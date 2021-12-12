@@ -1,8 +1,8 @@
 import './App.css';
-import { MovieList } from './components/MovieList';
+import { Movie } from './components/Movie';
 
 function App() {
-  return <MovieList />;
+  return <Movie />;
 }
 
 export { App };
