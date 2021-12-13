@@ -1,8 +1,7 @@
-import './App.css';
-import { Movie } from './components/Movie';
+import { ReactElement } from 'react';
 
-function App() {
-  return <Movie />;
+function App(): ReactElement {
+  return <p>Hello World</p>;
 }
 
 export { App };
