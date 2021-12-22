@@ -17,7 +17,7 @@ function useMovies(searchString: string): UseMoviesState {
     async function fetchMovies(searchString: string) {
       try {
         const response = await axios.get<FetchMoviesResponse>(
-          'http://www.omdbapi.com/',
+          'http://www.deelay.me/1500/http://www.omdbapi.com/',
           {
             params: {
               apiKey: '87d9551a',

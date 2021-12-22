@@ -13,7 +13,11 @@ function App() {
     return <ErrorNotification />;
   }
 
-  return <MovieList movies={movies} />;
+  return (
+    <>
+      <MovieList movies={movies} />
+    </>
+  );
 }
 
 export { App };

@@ -14,7 +14,7 @@ function MovieListItem({ movie }: MovieListItemProps) {
         alt=""
         width="60"
         height="88"
-        className="flex-none rounded-sm bg-gray-100"
+        className="flex-none rounded-sm bg-gray-100 w-20"
       />
       <div className="min-w-0 relative flex-auto">
         <h2 className="font-semibold text-gray-900 truncate pr-5">
