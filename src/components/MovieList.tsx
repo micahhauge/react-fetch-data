@@ -8,14 +8,18 @@ interface MovieListPros {
 }
 
 function MovieList({ movies }: MovieListPros) {
-  const movieComponents = movies.map((movie) => (
-    <MovieListItem movie={movie} />
+  const movieListItems = movies.map((movie, index) => (
+    <MovieListItem key={index} movie={movie} />
   ));
 
   return (
-    <ul>
-      <FadeIn className="divide-y divide-gray-100">{movieComponents}</FadeIn>
-    </ul>
+    <div className="grid justify-items-center mt-10">
+      <div className="max-w-xl w-full rounded-lg shadow-md px-auto">
+        <ul>
+          <FadeIn className="divide-y divide-gray-100">{movieListItems}</FadeIn>
+        </ul>
+      </div>
+    </div>
   );
 }
 

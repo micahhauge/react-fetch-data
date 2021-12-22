@@ -5,7 +5,7 @@ interface MovieListItemProps {
 }
 function MovieListItem({ movie }: MovieListItemProps) {
   return (
-    <article className="flex items-start space-x-6 p-6">
+    <article className="flex items-start space-x-6 p-6 w-full">
       <img
         src={movie.Poster}
         alt=""

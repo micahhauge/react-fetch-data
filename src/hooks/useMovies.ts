@@ -10,7 +10,7 @@ interface UseMoviesState {
 
 function useMovies(searchString: string): UseMoviesState {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [loadingMovies, setLoadingMovies] = useState(false);
+  const [loadingMovies, setLoadingMovies] = useState(true);
   const [errorLoadingMovies, setErrorLoadingMovies] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,11 @@ function useMovies(searchString: string): UseMoviesState {
           }
         );
         setMovies(response.data.Search);
+        setLoadingMovies(false);
+        setErrorLoadingMovies(false);
       } catch (error) {
+        setLoadingMovies(false);
+        setErrorLoadingMovies(true);
         console.log('Encountered error fetching movies.');
         throw error;
       }
