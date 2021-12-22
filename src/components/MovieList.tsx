@@ -1,14 +1,20 @@
 import { ReactNode } from 'react';
 import FadeIn from 'react-fade-in';
+import { Movie } from '../types/Movie';
+import { MovieListItem } from './MovieListItem';
 
 interface MovieListPros {
-  children: ReactNode;
+  movies: Movie[];
 }
 
-function MovieList({ children }: MovieListPros) {
+function MovieList({ movies }: MovieListPros) {
+  const movieComponents = movies.map((movie) => (
+    <MovieListItem movie={movie} />
+  ));
+
   return (
     <ul>
-      <FadeIn className="divide-y divide-gray-100">{children}</FadeIn>
+      <FadeIn className="divide-y divide-gray-100">{movieComponents}</FadeIn>
     </ul>
   );
 }
