@@ -4,12 +4,13 @@ function ErrorNotification(): ReactElement {
   return (
     <div>
       <div
-        className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+        className="m-10 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
         role="alert"
       >
-        <strong className="font-bold">Holy smokes!</strong>
+        <strong className="font-bold">Whoops!</strong>
         <span className="block sm:inline">
-          Something seriously bad happened.
+          {' '}
+          Looks like something went wrong.
         </span>
         <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
           <svg
