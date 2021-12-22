@@ -1,8 +1,7 @@
-import { ReactElement } from 'react';
 import { MovieList, LoadingPlaceholder, ErrorNotification } from './components';
 import { useMovies } from './hooks/useMovies';
 
-function App(): ReactElement {
+function App() {
   const { movies, loadingMovies, errorLoadingMovies } =
     useMovies('Lord of the Rings');
 

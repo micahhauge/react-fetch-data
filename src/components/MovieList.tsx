@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import FadeIn from 'react-fade-in';
 import { Movie } from '../types/Movie';
 import { MovieListItem } from './MovieListItem';
