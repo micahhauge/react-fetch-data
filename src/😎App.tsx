@@ -5,6 +5,8 @@ function App() {
   const { movies, loadingMovies, errorLoadingMovies } =
     useMovies('Lord of the Rings');
 
+  console.log('rendering App component');
+
   if (errorLoadingMovies) {
     return <ErrorNotification />;
   }
