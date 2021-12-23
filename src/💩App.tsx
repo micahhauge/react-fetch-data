@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import { MovieList, LoadingPlaceholder, ErrorNotification } from './components';
 import { FetchMoviesResponse, Movie } from './types';
 
@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get<FetchMoviesResponse>('http://www.omdbapi.com/', {
+      .get<FetchMoviesResponse>('https://www.omdbapi.com/', {
         params: {
           apiKey: '87d9551a',
           type: 'movie',
