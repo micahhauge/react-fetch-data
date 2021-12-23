@@ -2,8 +2,8 @@ import React, { ReactElement } from 'react';
 import FadeIn from 'react-fade-in';
 
 function LoadingPlaceholder(): ReactElement {
-  const loadingCards = [1, 2, 3, 4, 5, 6, 7].map((value) => (
-    <div key={value} className="p-6 max-w-xl w-full mx-auto">
+  const loadingPlaceholderCards = [...Array(7)].map((_, index) => (
+    <div key={index} className="p-6 max-w-xl w-full mx-auto">
       <div className="animate-pulse flex space-x-4">
         <div className="rounded-sm bg-gray-700 w-20 h-24"></div>
         <div className="flex-1 space-y-6 py-1">
@@ -24,7 +24,9 @@ function LoadingPlaceholder(): ReactElement {
     <div className="grid justify-items-center mt-10">
       <div className="max-w-xl w-full rounded-lg shadow-md px-auto">
         <ul>
-          <FadeIn className="divide-y divide-gray-100">{loadingCards}</FadeIn>
+          <FadeIn className="divide-y divide-gray-100">
+            {loadingPlaceholderCards}
+          </FadeIn>
         </ul>
       </div>
     </div>
